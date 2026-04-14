@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dns-propagation-checker"
+version = "1.0.0"
+description = "Check DNS propagation of a record across dozens of public resolvers worldwide."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+  { name = "Aslam Ahamed" }
+]
+keywords = ["dns", "propagation", "networking", "sysadmin", "cli", "devops"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Console",
+  "Intended Audience :: System Administrators",
+  "Intended Audience :: Information Technology",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Internet :: Name Service (DNS)",
+  "Topic :: System :: Networking",
+  "Topic :: System :: Systems Administration",
+]
+dependencies = [
+  "dnspython>=2.4.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/intruderfr/dns-propagation-checker"
+Issues = "https://github.com/intruderfr/dns-propagation-checker/issues"
+
+[project.scripts]
+dns-propagation-checker = "dns_propagation_checker:main"
+
+[tool.setuptools]
+py-modules = ["dns_propagation_checker"]
